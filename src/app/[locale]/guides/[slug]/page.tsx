@@ -84,6 +84,9 @@ export default async function GuidePage({ params }: Props) {
           />
           <h1 className="text-display-2">{guide.fm.title}</h1>
           <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line-soft pt-6 text-sm text-muted">
+            <span className="font-medium text-ink">
+              {locale === "es" ? "Por" : "By"} {siteConfig.name}
+            </span>
             <span className="tabular-nums">
               {t("guide.published", { date: formatDate(guide.fm.date, locale) })}
             </span>

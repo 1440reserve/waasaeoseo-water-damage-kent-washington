@@ -25,8 +25,8 @@
   --tone-faint: color-mix(in oklab, var(--brand-ink) 65%, var(--brand-paper));
   /* Accent darkened toward ink for small text on light backgrounds (WCAG AA). */
   --tone-accent-ink: color-mix(in oklab, var(--brand-accent) 55%, var(--brand-ink));
-  /* Accent lifted toward white for small text on dark bands. */
-  --tone-accent-bright: color-mix(in oklab, var(--brand-accent) 72%, white);
+  /* Accent lifted toward white for small text on dark bands (WCAG AA: ~4.5:1 on primary). */
+  --tone-accent-bright: color-mix(in oklab, var(--brand-accent) 52%, white);
   --tone-inverse: color-mix(in oklab, var(--brand-paper) 96%, var(--brand-primary));
   --tone-inverse-muted: color-mix(in oklab, var(--brand-paper) 70%, var(--brand-primary));
   --tone-accent-soft: color-mix(in oklab, var(--brand-accent) 12%, var(--brand-paper));

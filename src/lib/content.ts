@@ -30,7 +30,7 @@ export type Service = { fm: ServiceFrontmatter; body: string };
 export type Area = { fm: AreaFrontmatter; body: string };
 export type Guide = { fm: GuideFrontmatter; body: string };
 export type SimplePage = { fm: PageFrontmatter; body: string };
-export type SimplePageName = "about" | "privacy-policy";
+export type SimplePageName = "about" | "privacy-policy" | "terms";
 
 /* ------------------------------------------------------------------ */
 /* Low-level readers                                                   */

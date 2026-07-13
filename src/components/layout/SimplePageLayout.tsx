@@ -14,6 +14,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 const HREFS: Record<SimplePageName, Href> = {
   about: { pathname: "/about" } as Href,
   "privacy-policy": { pathname: "/privacy-policy" } as Href,
+  terms: { pathname: "/terms" } as Href,
 };
 
 export async function simplePageMetadata(

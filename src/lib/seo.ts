@@ -36,11 +36,12 @@ type BuildMeta = {
 /** Sitewide fallback share image so every page emits og:image (per locale). */
 function defaultShareImage(locale: Locale): ResolvedImage & { alt?: string } {
   const { branding } = siteConfig;
-  const ref = branding.ogImage ? lt(branding.ogImage, locale) : branding.logo;
-  return {
-    ...resolveImage(ref),
-    alt: siteConfig.name,
-  };
+  if (branding.ogImage) {
+    return { ...resolveImage(lt(branding.ogImage, locale)), alt: siteConfig.name };
+  }
+  // Generated 1200x630 branded card (src/app/api/og/route.tsx): a real
+  // share-sized image instead of the small logo.
+  return { src: "/api/og", width: 1200, height: 630, alt: siteConfig.name };
 }
 
 export function buildMetadata(meta: BuildMeta): Metadata {

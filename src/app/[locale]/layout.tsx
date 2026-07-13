@@ -59,7 +59,11 @@ export default async function LocaleLayout({
   const clientMessages = Object.fromEntries(
     CLIENT_MESSAGE_NAMESPACES.map((ns) => [ns, messages[ns]])
   );
-  const { ga4Id, gtmId, cookieConsent } = siteConfig.integrations;
+  const { gtmId, cookieConsent } = siteConfig.integrations;
+  // GA4 id from client config, or the NEXT_PUBLIC_GA_ID env var so analytics
+  // can be enabled on Vercel without a code change. Loading stays
+  // consent-gated inside CookieConsent.
+  const ga4Id = siteConfig.integrations.ga4Id ?? process.env.NEXT_PUBLIC_GA_ID;
   const showConsentBanner = cookieConsent ?? Boolean(ga4Id || gtmId);
 
   return (

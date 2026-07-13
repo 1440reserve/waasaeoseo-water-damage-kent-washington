@@ -211,7 +211,7 @@ export function Header({ nav }: { nav: NavData }) {
                 </li>
               ))}
               <li>
-                <Link href={nav.menu.href} className="block py-2.5 pl-4 text-lg text-accent">
+                <Link href={nav.menu.href} className="block py-2.5 pl-4 text-lg text-accent-ink">
                   {nav.menu.viewAllLabel}
                 </Link>
               </li>

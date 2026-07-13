@@ -19,7 +19,7 @@ import { buildMetadata, localizedUrl, type Href } from "@/lib/seo";
 import { serviceSchema } from "@/lib/schema-org";
 import { resolveImage } from "@/lib/images";
 import type { Locale } from "@/lib/schemas";
-import { formatPhone, telHref } from "@/lib/utils";
+import { formatDate, formatPhone, telHref } from "@/lib/utils";
 import { MdxContent } from "@/lib/mdx";
 import { Container, Section } from "@/components/ui/primitives";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -95,6 +95,12 @@ export default async function ServicePage({ params }: Props) {
           <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <h1 className="text-display-1">{fm.h1}</h1>
+
+              {fm.updated ? (
+                <p className="mt-4 font-mono text-xs uppercase tracking-[0.12em] text-faint">
+                  {t("guide.updated", { date: formatDate(fm.updated, locale) })}
+                </p>
+              ) : null}
 
               {/* Quick answer: the above-fold plain-language block that
                   answer engines and skimming visitors both consume. */}

@@ -72,6 +72,11 @@ export async function Footer({ locale }: { locale: Locale }) {
       label: locale === "es" ? "Política de Privacidad" : "Privacy Policy",
       href: { pathname: "/privacy-policy" } as Href,
     },
+    {
+      key: "terms",
+      label: locale === "es" ? "Términos de Servicio" : "Terms of Service",
+      href: { pathname: "/terms" } as Href,
+    },
   ];
 
   return (
