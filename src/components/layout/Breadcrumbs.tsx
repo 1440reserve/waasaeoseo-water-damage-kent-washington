@@ -31,7 +31,7 @@ export async function Breadcrumbs({
   return (
     <nav aria-label={t("a11y.breadcrumb")} className={className}>
       <JsonLd data={schema} />
-      <ol className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs uppercase tracking-[0.14em] text-faint">
+      <ol className="flex flex-wrap items-center gap-x-2.5 gap-y-1 font-mono text-xs uppercase tracking-[0.14em] text-faint">
         {all.map((crumb, i) => {
           const isLast = i === all.length - 1;
           return (

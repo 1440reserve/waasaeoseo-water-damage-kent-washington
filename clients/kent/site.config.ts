@@ -26,9 +26,9 @@ const config = {
     icon: "brand/icon.svg",
     // TODO: add a real 1200x630 share JPG and set ogImage: "og/share-en.jpg".
     colors: {
-      primary: "#143A5E", // deep water blue
-      accent: "#C65A1E", // safety orange
-      ink: "#101820",
+      primary: "#0C4A6E", // deep hydro blue
+      accent: "#F0472A", // signal vermilion
+      ink: "#0A1017", // near-black slate
       paper: "#FFFFFF",
     },
     fontPair: "editorial",

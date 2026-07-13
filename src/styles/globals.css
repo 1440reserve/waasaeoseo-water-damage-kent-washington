@@ -5,12 +5,16 @@
 /* style on <html> (see lib/theme.ts). Everything derives from these.  */
 /* ------------------------------------------------------------------ */
 :root {
-  --brand-primary: #143a5e; /* deep water blue */
-  --brand-accent: #c65a1e; /* safety orange */
-  --brand-ink: #101820;
+  --brand-primary: #0c4a6e; /* deep hydro blue */
+  --brand-accent: #f0472a; /* signal vermilion */
+  --brand-ink: #0a1017; /* near-black slate */
   --brand-paper: #ffffff;
-  --brand-cream: #f7f4ee; /* warm section background */
-  --brand-parchment: #efe9dd; /* card fill on cream sections */
+  --brand-cream: #edf1f3; /* cool steel section surface */
+  --brand-parchment: #e1e8ec; /* steel card fill on cream sections */
+
+  /* Semantic alias: prefer --signal in component classes for readability.
+     The signal color is reserved for live/urgent/action moments only. */
+  --signal: var(--brand-accent);
 
   /* Derived tones */
   --tone-line: color-mix(in oklab, var(--brand-ink) 14%, transparent);
@@ -42,6 +46,7 @@
   --color-primary-deep: var(--tone-primary-deep);
   --color-accent: var(--brand-accent);
   --color-accent-ink: var(--tone-accent-ink);
+  --color-accent-bright: var(--tone-accent-bright);
   --color-accent-soft: var(--tone-accent-soft);
   --color-ink: var(--brand-ink);
   --color-paper: var(--brand-paper);
@@ -56,8 +61,9 @@
   --color-inverse: var(--tone-inverse);
   --color-inverse-muted: var(--tone-inverse-muted);
 
-  --font-display: var(--font-display-active), ui-serif, Georgia, serif;
-  --font-sans: var(--font-body-active), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display-active), "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-body-active), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-active), "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
 /* ------------------------------------------------------------------ */
@@ -84,8 +90,8 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.015em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     line-height: 1.12;
     text-wrap: balance;
     color: var(--brand-ink);
@@ -134,7 +140,7 @@
   font-size: var(--text-display-1);
   line-height: 1.04;
   letter-spacing: -0.022em;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 @utility text-display-2 {
@@ -142,7 +148,7 @@
   font-size: var(--text-display-2);
   line-height: 1.08;
   letter-spacing: -0.018em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @utility text-display-3 {
@@ -150,36 +156,76 @@
   font-size: var(--text-display-3);
   line-height: 1.18;
   letter-spacing: -0.012em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* Small-caps editorial label with leading rule.
+/* Mono "log-label": the readout eyebrow with a leading signal hairline.
    Text uses the ink-shifted accent for WCAG AA on light backgrounds;
-   dark sections re-tint via .text-inverse-muted etc. */
+   dark sections re-tint via .dark-zone to the bright variant. */
 @utility eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 0.75rem;
+  gap: 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent-text, var(--tone-accent-ink));
 
   &::before {
     content: "";
-    width: 2rem;
+    width: 1.75rem;
     height: 1px;
-    background: var(--brand-accent);
+    background: var(--signal);
   }
 }
 
-@utility eyebrow-bare {
-  font-size: 0.75rem;
+/* Emergency contexts: swap the leading rule for a pulsing signal dot. */
+@utility eyebrow-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent-text, var(--tone-accent-ink));
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--signal);
+    box-shadow: 0 0 0 0 var(--signal);
+    animation: dispatch-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+}
+
+/* Rule-less log-label (footer/aside section labels). */
+@utility eyebrow-bare {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-text, var(--tone-accent-ink));
+}
+
+/* Mono tabular numerals for phone numbers, stats, timestamps. */
+@utility data {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+@keyframes dispatch-ping {
+  75%,
+  100% {
+    box-shadow: 0 0 0 7px color-mix(in oklab, var(--signal) 0%, transparent);
+  }
 }
 
 /* Dark bands flip the accent text to the bright variant. */
@@ -239,6 +285,9 @@ html.js [data-reveal].is-revealed {
   }
   details::details-content {
     transition: none !important;
+  }
+  .eyebrow-live::before {
+    animation: none;
   }
 }
 
@@ -319,6 +368,7 @@ html.js [data-reveal].is-revealed {
   border-left: 2px solid var(--brand-accent);
   padding-left: 1.25em;
   font-family: var(--font-display);
+  font-weight: 600;
   font-size: 1.15em;
   color: var(--brand-ink);
 }

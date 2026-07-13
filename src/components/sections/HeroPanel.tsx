@@ -51,7 +51,7 @@ export async function HeroPanel({ locale }: { locale: Locale }) {
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-75 motion-reduce:animate-none" />
               <span className="relative inline-flex size-2.5 rounded-full bg-accent" />
             </span>
-            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-inverse-muted">
+            <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-inverse-muted">
               {t("heroPanel.badge")}
             </span>
           </div>
@@ -59,13 +59,19 @@ export async function HeroPanel({ locale }: { locale: Locale }) {
           <p className="mt-6 text-sm text-inverse-muted">{t("heroPanel.callLabel")}</p>
           <a
             href={telHref(siteConfig.primaryPhone)}
-            className="mt-1 block font-display text-4xl font-semibold tabular-nums tracking-tight text-inverse transition-colors hover:text-accent sm:text-[2.75rem]"
+            className="data mt-1 block text-4xl font-semibold text-inverse transition-colors hover:text-accent-bright sm:text-[2.75rem]"
           >
             {phone}
           </a>
 
+          {/* Response readout: existing copy, no invented stats. */}
+          <p className="mt-6 flex items-start gap-2.5 border-t border-inverse/15 pt-5 text-sm text-inverse-muted">
+            <Icon name="activity" className="mt-0.5 size-4 shrink-0 text-accent" strokeWidth={1.8} />
+            {t("cta.available")}
+          </p>
+
           <div className="mt-7 border-t border-inverse/15 pt-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-inverse-muted">
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-inverse-muted">
               {t("heroPanel.handlesTitle")}
             </p>
             <ul className="mt-4 grid grid-cols-1 gap-x-5 gap-y-3 sm:grid-cols-2">

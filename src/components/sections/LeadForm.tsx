@@ -75,7 +75,7 @@ export function LeadForm({ locale, services, source, phoneDisplay, phoneHref, cl
         <p className="mt-3 leading-relaxed text-muted">{t("successBody")}</p>
         <a
           href={phoneHref}
-          className="mt-6 inline-flex items-center gap-2.5 font-display text-xl font-semibold text-primary hover:text-accent"
+          className="data mt-6 inline-flex items-center gap-2.5 text-xl font-semibold text-primary hover:text-accent-ink"
         >
           <Icon name="phone" className="size-5 text-accent" />
           {phoneDisplay}

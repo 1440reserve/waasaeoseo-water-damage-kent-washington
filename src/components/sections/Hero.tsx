@@ -32,7 +32,7 @@ export async function Hero({ locale }: { locale: Locale }) {
       </span>
     </div>
   ) : hero.eyebrow ? (
-    <p className="eyebrow">{hero.eyebrow}</p>
+    <p className="eyebrow-live">{hero.eyebrow}</p>
   ) : null;
 
   const ctas = (
@@ -51,7 +51,7 @@ export async function Hero({ locale }: { locale: Locale }) {
         size="lg"
       >
         <Icon name="phone" className="size-4.5 text-accent" />
-        {phone}
+        <span className="data">{phone}</span>
       </ButtonAnchor>
     </div>
   );
@@ -122,10 +122,10 @@ export async function Hero({ locale }: { locale: Locale }) {
             />
             {stat ? (
               <div className="absolute -left-4 bottom-8 border border-line-soft bg-paper px-6 py-5 shadow-[0_18px_48px_rgba(0,0,0,0.14)]">
-                <p className="font-display text-3xl font-semibold tracking-tight text-primary">
+                <p className="data text-3xl font-semibold text-primary">
                   {stat.value}
                 </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.16em] text-faint">
+                <p className="mt-1 font-mono text-xs uppercase tracking-[0.16em] text-faint">
                   {lt(stat.label, locale)}
                 </p>
               </div>

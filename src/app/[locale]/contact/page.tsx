@@ -48,7 +48,7 @@ export default async function ContactPage({ params }: Props) {
                 <p className="eyebrow-bare mb-2 !text-[0.7rem]">{t("contact.callTitle")}</p>
                 <a
                   href={telHref(siteConfig.primaryPhone)}
-                  className="font-display text-4xl font-semibold tabular-nums tracking-tight text-primary transition-colors hover:text-accent"
+                  className="data text-4xl font-semibold text-primary transition-colors hover:text-accent-ink"
                 >
                   {formatPhone(siteConfig.primaryPhone)}
                 </a>

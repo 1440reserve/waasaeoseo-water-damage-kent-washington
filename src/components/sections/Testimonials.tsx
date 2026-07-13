@@ -24,7 +24,7 @@ export function ReviewCard({ review }: { review: Review }) {
         <div>
           <p className="text-sm font-semibold">{review.author}</p>
           {SOURCE_LABEL[review.source] ? (
-            <p className="mt-0.5 text-xs uppercase tracking-[0.14em] text-faint">
+            <p className="mt-0.5 font-mono text-xs uppercase tracking-[0.14em] text-faint">
               {SOURCE_LABEL[review.source]}
             </p>
           ) : null}

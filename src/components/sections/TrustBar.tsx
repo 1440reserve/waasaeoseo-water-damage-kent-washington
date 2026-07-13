@@ -21,12 +21,12 @@ export async function TrustBar({ locale }: { locale: Locale }) {
         {googleRating ? (
           <Reveal>
             <div className="flex items-center gap-4">
-              <p className="font-display text-4xl font-semibold tracking-tight text-primary">
+              <p className="data text-4xl font-semibold text-primary">
                 {googleRating.value}
               </p>
               <div>
                 <Stars rating={googleRating.value} />
-                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-faint">
+                <p className="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-faint">
                   {googleRating.count}+ {t("trust.googleReviews")}
                 </p>
               </div>
@@ -37,10 +37,10 @@ export async function TrustBar({ locale }: { locale: Locale }) {
         {stats.map((stat, i) => (
           <Reveal key={i} delay={(i + 1) * 90}>
             <div className="text-center md:text-left">
-              <p className="font-display text-4xl font-semibold tracking-tight text-primary">
+              <p className="data text-4xl font-semibold text-primary">
                 {stat.value}
               </p>
-              <p className="mt-1 text-xs uppercase tracking-[0.14em] text-faint">
+              <p className="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-faint">
                 {lt(stat.label, locale)}
               </p>
             </div>
@@ -59,7 +59,7 @@ export async function TrustBar({ locale }: { locale: Locale }) {
                       className="h-10 w-auto opacity-80"
                     />
                   ) : (
-                    <span className="border border-line px-3.5 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-muted">
+                    <span className="border border-line px-3.5 py-2 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-muted">
                       {badge.label}
                     </span>
                   )}

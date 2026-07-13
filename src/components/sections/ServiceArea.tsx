@@ -43,7 +43,7 @@ export async function ServiceArea({ locale }: { locale: Locale }) {
                 </span>
                 <a
                   href={telHref(siteConfig.primaryPhone)}
-                  className="mt-2 flex items-center gap-2.5 font-medium tabular-nums text-primary hover:text-accent"
+                  className="data mt-2 flex items-center gap-2.5 font-medium text-primary hover:text-accent-ink"
                 >
                   <Icon name="phone" className="size-4 shrink-0 text-accent" />
                   {formatPhone(siteConfig.primaryPhone)}

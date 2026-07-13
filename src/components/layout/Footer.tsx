@@ -99,7 +99,7 @@ export async function Footer({ locale }: { locale: Locale }) {
             ) : null}
             <a
               href={telHref(siteConfig.primaryPhone)}
-              className="mt-6 inline-block font-display text-2xl font-semibold tabular-nums tracking-tight text-accent transition-opacity hover:opacity-80"
+              className="data mt-6 inline-block text-2xl font-semibold text-accent-bright transition-opacity hover:opacity-80"
             >
               {formatPhone(siteConfig.primaryPhone)}
             </a>

@@ -111,7 +111,7 @@ export default async function ServicePage({ params }: Props) {
                 </ButtonLink>
                 <ButtonAnchor href={telHref(siteConfig.primaryPhone)} variant="outline" size="lg">
                   <Icon name="phone" className="size-4.5 text-accent" />
-                  {phone}
+                  <span className="data">{phone}</span>
                 </ButtonAnchor>
               </div>
             </div>

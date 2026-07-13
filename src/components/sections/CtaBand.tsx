@@ -82,7 +82,7 @@ export async function CtaBand({
               size="lg"
             >
               <Icon name="phone" className="size-4.5 text-accent" />
-              {formatPhone(siteConfig.primaryPhone)}
+              <span className="data">{formatPhone(siteConfig.primaryPhone)}</span>
             </ButtonAnchor>
           </div>
         </div>

@@ -48,7 +48,7 @@ export default async function GuidesPage({ params }: Props) {
                   href={{ pathname: "/guides/[slug]", params: { slug: guide.fm.slug } } as Href}
                   className="group flex h-full flex-col border border-line-soft bg-paper p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(0,0,0,0.10)]"
                 >
-                  <p className="text-xs uppercase tracking-[0.14em] text-faint tabular-nums">
+                  <p className="font-mono text-xs uppercase tracking-[0.14em] text-faint tabular-nums">
                     {formatDate(guide.fm.updated ?? guide.fm.date, locale)}
                   </p>
                   <h2 className="mt-3 font-display text-xl font-semibold tracking-tight transition-colors group-hover:text-primary">

@@ -100,7 +100,7 @@ export default async function AreaPage({ params }: Props) {
                 </ButtonLink>
                 <ButtonAnchor href={telHref(siteConfig.primaryPhone)} variant="outline" size="lg">
                   <Icon name="phone" className="size-4.5 text-accent" />
-                  {formatPhone(siteConfig.primaryPhone)}
+                  <span className="data">{formatPhone(siteConfig.primaryPhone)}</span>
                 </ButtonAnchor>
               </div>
             </div>

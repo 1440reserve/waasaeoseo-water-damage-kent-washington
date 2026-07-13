@@ -154,7 +154,7 @@ export function Header({ nav }: { nav: NavData }) {
           <a
             href={nav.phoneHref}
             aria-label={nav.phoneAria}
-            className="hidden items-center gap-2 whitespace-nowrap font-display text-[1.05rem] font-semibold tabular-nums tracking-tight text-primary transition-colors hover:text-accent md:flex"
+            className="data hidden items-center gap-2 whitespace-nowrap text-[1.05rem] font-semibold text-primary transition-colors hover:text-accent-ink md:flex"
           >
             <Icon name="phone" className="size-[1.1rem] text-accent" />
             {nav.phoneDisplay}
@@ -229,7 +229,7 @@ export function Header({ nav }: { nav: NavData }) {
           <div className="mt-8 flex flex-col gap-3">
             <a
               href={nav.phoneHref}
-              className="inline-flex items-center justify-center gap-2.5 bg-accent px-6 py-4 font-display text-lg font-semibold text-ink"
+              className="data inline-flex items-center justify-center gap-2.5 bg-accent px-6 py-4 text-lg font-semibold text-ink"
             >
               <Icon name="phone" className="size-5" />
               {nav.phoneDisplay}

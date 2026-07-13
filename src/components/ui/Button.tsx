@@ -15,8 +15,8 @@ const VARIANTS: Record<Variant, string> = {
   accent: "bg-accent text-ink hover:brightness-105",
   outline: "border border-line text-ink hover:border-accent hover:text-primary",
   "outline-inverse":
-    "border border-inverse/30 text-inverse hover:border-accent hover:text-accent",
-  ghost: "text-primary hover:text-accent px-0",
+    "border border-inverse/30 text-inverse hover:border-accent-bright hover:text-accent-bright",
+  ghost: "text-primary hover:text-accent-ink px-0",
 };
 
 const SIZES: Record<Size, string> = {
