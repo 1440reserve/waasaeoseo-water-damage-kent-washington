@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="48" viewBox="0 0 360 48">
+  <!-- TODO: replace this placeholder wordmark with the real logo. -->
+  <path d="M18 6c6 7.2 10 12.9 10 17.8A10 10 0 0 1 8 23.8C8 18.9 12 13.2 18 6Z" fill="#143A5E"/>
+  <path d="M14.5 25.5a3.5 3.5 0 0 0 7 0" fill="none" stroke="#C65A1E" stroke-width="2" stroke-linecap="round"/>
+  <text x="38" y="31" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="600" fill="#143A5E">Kent Water Damage Pros</text>
+</svg>

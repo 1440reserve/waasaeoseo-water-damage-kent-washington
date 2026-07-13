@@ -1,0 +1,65 @@
+# Homepage copy. The homepage IS the head-topic page (water damage
+# restoration in Kent, WA): there is no separate service page for it.
+# Written against content/nlp/water-damage-restoration-entities.csv
+# in the parent repo. Plain English, no fabricated claims, no dashes.
+
+metaTitle: "Water Damage Restoration Kent WA | Kent Water Damage Pros"
+metaDescription: "24/7 water damage restoration in Kent, WA. Fast local response, water extraction, structural drying, and help with your insurance claim. Call now."
+
+hero:
+  eyebrow: "24/7 Emergency Response in Kent, WA"
+  heading: "Water Damage Restoration in Kent, WA"
+  subheading: "Flooded basement, burst pipe, or a leak that got out of hand? Call now, day or night, and get connected with a licensed, IICRC certified restoration team serving Kent and South King County."
+  # TODO: add a real photo to assets/ and reference it here, e.g.
+  # image: "photos/kent-hero.jpg"
+  # imageAlt: "TODO: describe the photo"
+  ctaLabel: "Request Help Now"
+
+whyUs:
+  title: "Why Kent homeowners call us first"
+  blocks:
+    - title: "Answered 24/7, moving fast"
+      description: "Water does not wait for business hours. Calls are answered around the clock, and emergency water removal gets moving the moment you hang up."
+      icon: clock
+    - title: "Extraction, drying, done right"
+      description: "Professional water extraction and structural drying equipment stops the damage from spreading and shuts mold down before it starts. The restoration process starts on day one, not next week."
+      icon: droplet
+    - title: "Licensed, insured, IICRC trained"
+      description: "The work in your home is done by a licensed and insured local restoration company with IICRC trained technicians. No out-of-town call centers, no mystery crews."
+      icon: shield
+    - title: "Your insurance claim, documented"
+      description: "Water damage claims live or die on documentation. You get the photos, moisture readings, and scope of work your insurance company actually needs to pay the claim."
+      icon: clipboard
+
+serviceArea:
+  blurb: "We serve Kent and the surrounding South King County communities, from East Hill and Panther Lake to Covington, Des Moines, SeaTac, and Tukwila. When a Green River valley storm floods your street or a cold snap bursts a pipe overnight, help is already close by."
+  # TODO: add a local landmark photo to assets/ and reference it here.
+
+ctaBand:
+  heading: "Water in your home right now?"
+  subheading: "Every hour of standing water makes the damage worse. Call now and talk to a real person who can get a crew headed to your Kent property."
+  # TODO: add a background photo to assets/ and reference it here.
+
+process:
+  eyebrow: "How it works"
+  title: "What happens when you call"
+  steps:
+    - title: "Tell us what happened"
+      description: "You describe the situation: where the water is coming from, how long it has been sitting, and what kind of water you are dealing with. If fire or smoke damage is part of the loss, say so, and the right crew gets dispatched for the job."
+    - title: "Inspection and assessment"
+      description: "Technicians inspect the property, trace the water leak back to its source, and use moisture meters to map how far water has traveled into floors, walls, and contents. You get a written scope before work starts."
+    - title: "Water extraction and removal"
+      description: "Truck-mounted pumps and extraction equipment pull out standing water fast, before porous materials like hardwood, carpet pad, and drywall are ruined beyond saving."
+    - title: "Structural drying and monitoring"
+      description: "Commercial dehumidifiers and air movers run until the meters prove the structure is dry, with readings logged daily. Clear communication along the way means you always know the condition of your home."
+    - title: "Repairs, cleanup, and your claim"
+      description: "The crew handles cleaning, mold removal where it is needed, and repairs, and the drying logs and photos go straight to your insurance company so the claim keeps moving."
+
+localIntro:
+  eyebrow: "Local knowledge"
+  title: "Water damage help built for Kent"
+  paragraphs:
+    - "Kent sits in the Green River valley just south of Seattle, and the geography shows up in flooded homes every winter. Atmospheric river storms saturate the ground and push water into crawl spaces, wind leaves roof leaks and storm damage behind, and a hard cold snap bursts pipes from East Hill to the West Hill. Sewage backups and appliance leaks do not care what season it is."
+    - "Not every water loss is the same job. Clean water from a burst supply line is a different problem than gray water from a washing machine, and both are a world away from black water out of a sewage backup. The cleanup techniques, safety gear, drying time, and what insurance companies will cover all change with the category, and our guides explain each type in plain English."
+    - "Choosing a water damage restoration company mid-emergency is hard, so we did the vetting ahead of time. The mitigation and restoration services behind this site come from licensed, insured professionals working the Kent area, with real Google reviews you can check before the truck arrives. Customers get straight answers, a written estimate, and a crew that treats the house like they live in it."
+    - "The service area covers Kent and the neighboring communities of Covington, Des Moines, SeaTac, Tukwila, Fairwood, and Maple Valley. Outside that? Call anyway. Emergency service routing exists so nobody is left watching the water rise."

@@ -1,0 +1,38 @@
+# Sitewide FAQs (homepage teaser shows `featured: true` entries).
+# Honest answers only. Native details/summary rendering keeps all of
+# this in the DOM for search engines.
+
+- id: response-time
+  q: "How fast can someone get to my property in Kent?"
+  a: "Most emergency calls in Kent get a crew moving within the hour. Exact arrival depends on where you are and how many losses are active that day, so you get an honest arrival window on the phone before anyone is dispatched, not a promise that cannot be kept."
+  featured: true
+
+- id: insurance
+  q: "Do you work with homeowners insurance?"
+  a: "Yes. Sudden water damage is one of the most common homeowners insurance claims, and the crews we work with document everything your insurer needs: photos, moisture readings, drying logs, and a written scope of work. Our insurance claim guide walks through the whole process step by step."
+  featured: true
+
+- id: cost
+  q: "How much does water damage restoration cost?"
+  a: "It depends on the category of water and how far it spread. A small clean-water cleanup can run a few hundred dollars, while major flooding with structural drying and repairs can run into the thousands. The good news: insurance covers many sudden losses. Our cost guide breaks down real numbers for Kent homes."
+  featured: true
+
+- id: what-to-do-first
+  q: "What should I do while I wait for help to arrive?"
+  a: "If it is safe, shut off the water at the source and cut power to the affected rooms at the breaker. Stay out of sewage or gray water and keep kids and pets away from it. Move valuables you can safely reach and take photos for your claim. Leave the rest to the technicians."
+  featured: true
+
+- id: who-does-the-work
+  q: "Who actually performs the restoration work?"
+  a: "Kent Water Damage Pros connects you with a licensed, insured local restoration company. We run the emergency line and this website; IICRC trained technicians on the ground do the physical work in your home. You always know exactly which company is at your door."
+  featured: true
+
+- id: mold
+  q: "Will water damage turn into mold?"
+  a: "It can, and fast. Mold can start growing on wet drywall and floors within 24 to 48 hours, which is why professional drying matters more than it looks. If the loss is dried correctly and verified with moisture readings, mold almost never becomes a problem."
+  featured: false
+
+- id: diy
+  q: "Can I just dry it out myself with fans?"
+  a: "Household fans move air, but they cannot pull water out of walls, subfloors, or insulation. Moisture trapped inside materials is what causes rot, buckled floors, and mold weeks later. A shop vac and fans are fine for a small clean-water spill; anything bigger deserves real extraction and drying equipment."
+  featured: false

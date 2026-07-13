@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "areas": "Service Areas",
+    "guides": "Guides",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNavigation": "Main navigation",
+    "footerNavigation": "Footer navigation",
+    "breadcrumb": "Breadcrumb",
+    "callPhone": "Call {phone}"
+  },
+  "cta": {
+    "headerCta": "Request Help",
+    "primary": "Request Help Now",
+    "callNow": "Call Now",
+    "available": "Answered 24/7. Most emergency calls have help moving within the hour.",
+    "bandHeading": "Dealing with water damage right now?",
+    "bandSubheading": "Call now and get connected with a licensed local crew serving the Kent area. The line is open 24/7."
+  },
+  "heroPanel": {
+    "badge": "24/7 Emergency Response",
+    "callLabel": "Call now, day or night",
+    "handlesTitle": "What we handle",
+    "flooding": "Flooded basements",
+    "pipes": "Burst and frozen pipes",
+    "sewage": "Sewage cleanup",
+    "mold": "Mold remediation",
+    "storm": "Storm and roof leaks",
+    "extraction": "Water extraction"
+  },
+  "form": {
+    "title": "Request Service",
+    "subtitle": "Tell us what happened and we will connect you with a local crew. For emergencies, calling is fastest.",
+    "name": "Full name",
+    "phone": "Phone number",
+    "email": "Email address",
+    "service": "What do you need help with?",
+    "servicePlaceholder": "Select a service",
+    "message": "Briefly describe the damage",
+    "messagePlaceholder": "For example: water heater burst in the garage, about an inch of water across the floor.",
+    "smsConsent": "I agree to receive calls and text messages about my request. Message and data rates may apply. Reply STOP to opt out.",
+    "submit": "Send Request",
+    "submitting": "Sending…",
+    "successTitle": "Request received.",
+    "successBody": "Thanks. A local restoration crew will call you back shortly. If this is urgent, please call us now instead of waiting.",
+    "errorGeneric": "Something went wrong sending your request. Please try again, or call us directly.",
+    "other": "Something else / not sure"
+  },
+  "sections": {
+    "servicesEyebrow": "Our Services",
+    "servicesTitle": "Water damage services for Kent homes and businesses",
+    "servicesViewAll": "View all services",
+    "learnMore": "Learn more",
+    "whyUsEyebrow": "Why {name}",
+    "whyUsTitle": "Why Kent homeowners call us first",
+    "testimonialsEyebrow": "Reviews",
+    "testimonialsTitle": "What Kent customers say",
+    "serviceAreaEyebrow": "Where We Work",
+    "serviceAreaTitle": "Serving {region}",
+    "communitiesServed": "Communities we serve",
+    "faqEyebrow": "Common Questions",
+    "faqTitle": "Frequently Asked Questions"
+  },
+  "trust": {
+    "googleReviews": "Google Reviews",
+    "ratedBy": "{rating} from {count}+ reviews",
+    "reviewsLabel": "reviews"
+  },
+  "service": {
+    "quickAnswerLabel": "The short answer",
+    "highlightsTitle": "What this covers",
+    "processTitle": "What to expect",
+    "areasTitle": "Where we provide this service",
+    "relatedTitle": "Related services",
+    "guidesTitle": "Helpful guides",
+    "faqTitle": "{service} FAQs",
+    "indexTitle": "Water Damage Services",
+    "indexIntro": "Water damage moves fast and comes in many forms. Flooded basement, burst pipe, sewage backup, or storm damage, these are the services available through the local crews we connect you with across Kent, WA. Every one is available 24/7.",
+    "indexMetaDescription": "Water damage restoration services in Kent, WA: flood cleanup, extraction, mold, sewage, storm, and burst pipes. Available 24/7. Call now."
+  },
+  "area": {
+    "quickAnswerLabel": "The short answer",
+    "neighborhoodsTitle": "Neighborhoods we serve",
+    "servicesTitle": "Services available in {area}",
+    "relatedTitle": "Nearby areas we serve",
+    "guidesTitle": "Helpful guides",
+    "faqTitle": "Questions from {area}",
+    "indexTitle": "Areas We Serve",
+    "indexIntro": "We connect homeowners with local restoration crews across Kent and the surrounding South King County communities. Choose your area to see the water damage risks specific to where you live and how help reaches you fast.",
+    "indexMetaDescription": "Water damage restoration across Kent, WA and nearby areas, from East Hill to Tukwila and Covington. Available 24/7. Call now for local help."
+  },
+  "guide": {
+    "quickAnswerLabel": "The short answer",
+    "indexTitle": "Water Damage Guides",
+    "indexIntro": "Straight answers about water damage, written for homeowners rather than search engines. From what restoration really costs to how insurance claims work and what to do in the first hour, these guides help you make good decisions under pressure.",
+    "indexMetaDescription": "Plain-English guides to water damage in Kent, WA: costs, insurance claims, water categories, drying time, and emergency first steps.",
+    "published": "Published {date}",
+    "updated": "Updated {date}",
+    "backToIndex": "All guides",
+    "relatedService": "Related service",
+    "continueReading": "Continue reading"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Water damage is easier to handle with one call. Reach us any time and we will connect you with a licensed local crew serving Kent.",
+    "metaTitle": "Contact Us",
+    "metaDescription": "Contact Kent Water Damage Pros for 24/7 water damage help in Kent, WA. Call or send the form to reach a local restoration crew fast.",
+    "callTitle": "Prefer to talk now?"
+  },
+  "footer": {
+    "navigate": "Navigate",
+    "services": "Services",
+    "areas": "Service Areas",
+    "connect": "Connect",
+    "rightsReserved": "All rights reserved."
+  },
+  "stickyBar": {
+    "call": "Call Now",
+    "contact": "Request Help"
+  },
+  "consent": {
+    "regionLabel": "Cookie consent",
+    "message": "We use optional analytics cookies to understand how visitors use our site and improve it. None are set unless you accept.",
+    "privacyLink": "Privacy Policy",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "notFound": {
+    "title": "This page doesn't exist",
+    "body": "The page you're looking for may have moved. Let's get you back on track.",
+    "backHome": "Back to home"
+  }
+}

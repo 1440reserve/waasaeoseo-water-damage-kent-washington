@@ -1,0 +1,354 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* Brand variables: defaults here, overridden per client via inline    */
+/* style on <html> (see lib/theme.ts). Everything derives from these.  */
+/* ------------------------------------------------------------------ */
+:root {
+  --brand-primary: #143a5e; /* deep water blue */
+  --brand-accent: #c65a1e; /* safety orange */
+  --brand-ink: #101820;
+  --brand-paper: #ffffff;
+  --brand-cream: #f7f4ee; /* warm section background */
+  --brand-parchment: #efe9dd; /* card fill on cream sections */
+
+  /* Derived tones */
+  --tone-line: color-mix(in oklab, var(--brand-ink) 14%, transparent);
+  --tone-line-soft: color-mix(in oklab, var(--brand-ink) 8%, transparent);
+  --tone-soft: var(--brand-cream);
+  --tone-mist: color-mix(in oklab, var(--brand-primary) 10%, var(--brand-paper));
+  --tone-muted: color-mix(in oklab, var(--brand-ink) 68%, var(--brand-paper));
+  --tone-faint: color-mix(in oklab, var(--brand-ink) 65%, var(--brand-paper));
+  /* Accent darkened toward ink for small text on light backgrounds (WCAG AA). */
+  --tone-accent-ink: color-mix(in oklab, var(--brand-accent) 55%, var(--brand-ink));
+  /* Accent lifted toward white for small text on dark bands. */
+  --tone-accent-bright: color-mix(in oklab, var(--brand-accent) 72%, white);
+  --tone-inverse: color-mix(in oklab, var(--brand-paper) 96%, var(--brand-primary));
+  --tone-inverse-muted: color-mix(in oklab, var(--brand-paper) 70%, var(--brand-primary));
+  --tone-accent-soft: color-mix(in oklab, var(--brand-accent) 12%, var(--brand-paper));
+  --tone-primary-deep: color-mix(in oklab, var(--brand-primary) 82%, black);
+
+  /* Fluid display type scale */
+  --text-display-1: clamp(2.625rem, 5vw + 1.1rem, 4.75rem);
+  --text-display-2: clamp(2rem, 3.2vw + 0.85rem, 3.25rem);
+  --text-display-3: clamp(1.5rem, 1.8vw + 0.8rem, 2.125rem);
+}
+
+/* ------------------------------------------------------------------ */
+/* Tailwind theme tokens (referencing the vars so theming is dynamic)  */
+/* ------------------------------------------------------------------ */
+@theme inline {
+  --color-primary: var(--brand-primary);
+  --color-primary-deep: var(--tone-primary-deep);
+  --color-accent: var(--brand-accent);
+  --color-accent-ink: var(--tone-accent-ink);
+  --color-accent-soft: var(--tone-accent-soft);
+  --color-ink: var(--brand-ink);
+  --color-paper: var(--brand-paper);
+  --color-cream: var(--brand-cream);
+  --color-parchment: var(--brand-parchment);
+  --color-line: var(--tone-line);
+  --color-line-soft: var(--tone-line-soft);
+  --color-soft: var(--tone-soft);
+  --color-mist: var(--tone-mist);
+  --color-muted: var(--tone-muted);
+  --color-faint: var(--tone-faint);
+  --color-inverse: var(--tone-inverse);
+  --color-inverse-muted: var(--tone-inverse-muted);
+
+  --font-display: var(--font-display-active), ui-serif, Georgia, serif;
+  --font-sans: var(--font-body-active), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ------------------------------------------------------------------ */
+/* Base                                                                */
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--brand-paper);
+    color: var(--brand-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
+    text-wrap: balance;
+    color: var(--brand-ink);
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--brand-accent) 30%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  @supports (interpolate-size: allow-keywords) {
+    :root {
+      interpolate-size: allow-keywords;
+    }
+    details::details-content {
+      block-size: 0;
+      overflow-y: clip;
+      transition:
+        content-visibility 0.3s allow-discrete,
+        block-size 0.3s ease;
+    }
+    details[open]::details-content {
+      block-size: auto;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Utilities                                                           */
+/* ------------------------------------------------------------------ */
+@utility text-display-1 {
+  font-family: var(--font-display);
+  font-size: var(--text-display-1);
+  line-height: 1.04;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+}
+
+@utility text-display-2 {
+  font-family: var(--font-display);
+  font-size: var(--text-display-2);
+  line-height: 1.08;
+  letter-spacing: -0.018em;
+  font-weight: 600;
+}
+
+@utility text-display-3 {
+  font-family: var(--font-display);
+  font-size: var(--text-display-3);
+  line-height: 1.18;
+  letter-spacing: -0.012em;
+  font-weight: 600;
+}
+
+/* Small-caps editorial label with leading rule.
+   Text uses the ink-shifted accent for WCAG AA on light backgrounds;
+   dark sections re-tint via .text-inverse-muted etc. */
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-text, var(--tone-accent-ink));
+
+  &::before {
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: var(--brand-accent);
+  }
+}
+
+@utility eyebrow-bare {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-text, var(--tone-accent-ink));
+}
+
+/* Dark bands flip the accent text to the bright variant. */
+@utility dark-zone {
+  --accent-text: var(--tone-accent-bright);
+}
+
+/* Animated underline sweep for inline links */
+@utility link-sweep {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  padding-bottom: 2px;
+
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
+
+/* Warm band for subpage openers (section rhythm: paper/wash/dark). */
+@utility bg-wash {
+  background: var(--brand-cream);
+}
+
+/* Flat brand primary: dark bands and footer. Photo overlays are per-component. */
+@utility bg-wash-dark {
+  background: var(--brand-primary);
+}
+
+/* ------------------------------------------------------------------ */
+/* Scroll-reveal (progressive enhancement: hidden state only if JS)    */
+/* ------------------------------------------------------------------ */
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.js [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  html.js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  details::details-content {
+    transition: none !important;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Prose: long-form MDX content (services, areas, guides, legal)       */
+/* ------------------------------------------------------------------ */
+.prose {
+  max-width: 68ch;
+  color: color-mix(in oklab, var(--brand-ink) 88%, var(--brand-paper));
+}
+
+.prose > * + * {
+  margin-top: 1.25em;
+}
+
+.prose h2 {
+  font-size: 1.625rem;
+  margin-top: 2.4em;
+  margin-bottom: 0.7em;
+  scroll-margin-top: 6rem;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  margin-top: 1.9em;
+  margin-bottom: 0.6em;
+  scroll-margin-top: 6rem;
+}
+
+.prose a {
+  color: var(--brand-primary);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--brand-accent) 55%, transparent);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.prose a:hover {
+  text-decoration-color: var(--brand-accent);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.4em;
+}
+
+.prose ul {
+  list-style: none;
+}
+
+.prose ul > li {
+  position: relative;
+  padding-left: 0.4em;
+  margin-top: 0.5em;
+}
+
+.prose ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1.1em;
+  top: 0.68em;
+  width: 0.45em;
+  height: 1px;
+  background: var(--brand-accent);
+}
+
+.prose ol {
+  list-style: decimal;
+}
+
+.prose ol > li {
+  margin-top: 0.5em;
+  padding-left: 0.3em;
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--brand-accent);
+  padding-left: 1.25em;
+  font-family: var(--font-display);
+  font-size: 1.15em;
+  color: var(--brand-ink);
+}
+
+.prose strong {
+  color: var(--brand-ink);
+  font-weight: 600;
+}
+
+.prose hr {
+  border: 0;
+  height: 1px;
+  background: var(--tone-line);
+  margin: 2.5em 0;
+}
+
+.prose table {
+  width: 100%;
+  font-size: 0.95em;
+  border-collapse: collapse;
+}
+
+.prose th {
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid var(--tone-line);
+  padding: 0.5em 0.75em;
+}
+
+.prose td {
+  border-bottom: 1px solid var(--tone-line-soft);
+  padding: 0.5em 0.75em;
+}

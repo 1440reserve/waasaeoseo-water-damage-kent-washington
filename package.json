@@ -1,0 +1,51 @@
+{
+  "name": "rank-and-rent-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-client local lead-gen website template (Next.js 16). One codebase, one client per deployment via SITE_ID. Ported from the waas-template.",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "postinstall": "node scripts/prepare-client.mjs --soft",
+    "predev": "node scripts/prepare-client.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/prepare-client.mjs",
+    "build": "next build",
+    "start": "next start",
+    "pretypecheck": "node scripts/prepare-client.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^3.1.1",
+    "gray-matter": "^4.0.3",
+    "image-size": "^2.0.2",
+    "next": "16.2.10",
+    "next-intl": "^4.13.1",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "remark-gfm": "^4.0.1",
+    "resend": "^6.17.1",
+    "yaml": "^2.9.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "16.2.10",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "@tailwindcss/oxide",
+      "unrs-resolver"
+    ]
+  }
+}
