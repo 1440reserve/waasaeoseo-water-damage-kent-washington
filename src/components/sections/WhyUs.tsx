@@ -27,7 +27,7 @@ export async function WhyUs({ locale }: { locale: Locale }) {
           <div>
             {whyUs.blocks.map((block, i) => (
               <Reveal key={i} delay={i * 60}>
-                <div className="group border-b border-line py-8 first:pt-0">
+                <div className={`group border-b border-line py-8 ${i === 0 ? "pt-0" : ""}`}>
                   <div className="flex items-center gap-3">
                     {block.icon ? (
                       <Icon name={block.icon} className="size-5 text-accent" />

@@ -19,7 +19,7 @@ export async function ProcessSteps({ locale }: { locale: Locale }) {
         <ol className="mt-12">
           {process.steps.map((step, i) => (
             <Reveal key={i} delay={i * 60}>
-              <li className="grid gap-4 border-b border-line py-8 first:pt-0 sm:grid-cols-[5rem_1fr] sm:gap-8">
+              <li className={`grid gap-4 border-b border-line py-8 sm:grid-cols-[5rem_1fr] sm:gap-8 ${i === 0 ? "pt-0" : ""}`}>
                 {/* Mono "timestamp": the process step logged like a dispatch entry. */}
                 <div
                   aria-hidden
