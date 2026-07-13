@@ -67,6 +67,7 @@ export async function CtaBand({
       <Container className="relative">
         <div className="grid items-center gap-10 lg:grid-cols-[1.5fr_1fr]">
           <div>
+            <p className="eyebrow-live mb-5">{t("heroPanel.badge")}</p>
             <h2 className="text-display-2 text-inverse">{h}</h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-inverse-muted">
               {sub}

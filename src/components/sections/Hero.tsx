@@ -108,7 +108,6 @@ export async function Hero({ locale }: { locale: Locale }) {
             {hero.subheading}
           </p>
           <div className="mt-10">{ctas}</div>
-          <p className="mt-6 text-sm text-faint">{t("cta.available")}</p>
         </div>
 
         {image ? (

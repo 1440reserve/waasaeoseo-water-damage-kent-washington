@@ -103,6 +103,7 @@ export async function Footer({ locale }: { locale: Locale }) {
             >
               {formatPhone(siteConfig.primaryPhone)}
             </a>
+            <p className="eyebrow-live mt-4">{t("heroPanel.callLabel")}</p>
             {rating ? (
               <div className="mt-4 flex items-center gap-2.5 text-sm text-inverse-muted">
                 <Stars rating={rating.value} />
