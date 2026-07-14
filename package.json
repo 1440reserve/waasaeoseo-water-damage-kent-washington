@@ -1,5 +1,5 @@
 {
-  "name": "rank-and-rent-site",
+  "name": "water-damage-site",
   "version": "0.1.0",
   "private": true,
   "description": "Multi-client local lead-gen website template (Next.js 16). One codebase, one client per deployment via SITE_ID. Ported from the waas-template.",
