@@ -4,16 +4,18 @@ import { siteConfig } from "@/lib/site";
 import { telHref } from "@/lib/utils";
 import type { Locale } from "@/lib/schemas";
 import { Icon } from "@/components/ui/Icon";
+import { StickyBarShell } from "./StickyBarShell";
 
 /**
- * Mobile-only sticky bar (the phone is the #1 initial-contact channel
- * for emergency home services). Pure CSS, zero JS.
+ * Mobile-only sticky call bar (the phone is the #1 initial-contact channel
+ * for emergency home services). Content is server-rendered; a thin client
+ * shell reveals it on scroll so it does not shout on first paint.
  */
 export async function StickyCallBar({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: "stickyBar" });
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-line-soft md:hidden">
+    <StickyBarShell>
       <a
         href={telHref(siteConfig.primaryPhone)}
         className="flex items-center justify-center gap-2 bg-accent py-3.5 pb-[max(0.875rem,env(safe-area-inset-bottom))] font-semibold text-ink"
@@ -27,6 +29,6 @@ export async function StickyCallBar({ locale }: { locale: Locale }) {
       >
         {t("contact")}
       </Link>
-    </div>
+    </StickyBarShell>
   );
 }

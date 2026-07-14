@@ -71,7 +71,7 @@ export function Header({ nav }: { nav: NavData }) {
         {nav.a11y.skipToContent}
       </a>
 
-      <div className="mx-auto flex h-[4.25rem] w-full max-w-[88rem] items-center justify-between gap-6 px-6 sm:px-8 md:h-[4.75rem]">
+      <div className="mx-auto flex h-[4.25rem] w-full max-w-[88rem] items-center justify-between gap-3 px-5 sm:gap-6 sm:px-8 md:h-[4.75rem]">
         {/* Logo */}
         <Link href="/" className="flex shrink-0 items-center" aria-label={nav.name}>
           <Image
@@ -81,7 +81,7 @@ export function Header({ nav }: { nav: NavData }) {
             height={nav.logo.height}
             priority
             unoptimized={nav.logo.src.endsWith(".svg")}
-            className="h-9 w-auto md:h-10"
+            className="h-7 w-auto sm:h-9 md:h-10"
           />
           {/* Text-level anchor for crawlers that ignore alt/aria-label. */}
           <span className="sr-only">{nav.name}</span>
@@ -150,7 +150,7 @@ export function Header({ nav }: { nav: NavData }) {
         </nav>
 
         {/* Right cluster */}
-        <div className="flex items-center gap-3 md:gap-5">
+        <div className="flex items-center gap-2 sm:gap-3 md:gap-5">
           <a
             href={nav.phoneHref}
             aria-label={nav.phoneAria}
