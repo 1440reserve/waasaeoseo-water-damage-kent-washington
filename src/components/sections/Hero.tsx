@@ -77,7 +77,7 @@ export async function Hero({ locale }: { locale: Locale }) {
           className="absolute inset-0 -z-10"
           style={{
             background:
-              "linear-gradient(100deg, color-mix(in srgb, var(--brand-primary) 92%, transparent) 0%, color-mix(in srgb, var(--brand-primary) 60%, transparent) 55%, color-mix(in srgb, var(--brand-primary) 30%, transparent) 100%)",
+              "linear-gradient(100deg, color-mix(in srgb, var(--brand-primary) 95%, transparent) 0%, color-mix(in srgb, var(--brand-primary) 84%, transparent) 52%, color-mix(in srgb, var(--brand-primary) 52%, transparent) 100%)",
           }}
         />
         <div className="mx-auto w-full max-w-[76rem] px-5 py-24 sm:px-8">

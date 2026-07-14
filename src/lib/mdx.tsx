@@ -1,6 +1,7 @@
 import { evaluate } from "@mdx-js/mdx";
 import * as runtime from "react/jsx-runtime";
 import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
 import { mdxComponents } from "@/components/mdx/mdx-components";
 
 type Props = {
@@ -18,7 +19,9 @@ export async function MdxContent({ source, components }: Props) {
   const { default: Content } = await evaluate(source, {
     ...(runtime as Record<string, unknown>),
     remarkPlugins: [remarkGfm],
-  } as Parameters<typeof evaluate>[1]);
+    // Add id="" to every heading so in-page table-of-contents anchors work.
+    rehypePlugins: [rehypeSlug],
+  } as unknown as Parameters<typeof evaluate>[1]);
 
   return <Content components={{ ...mdxComponents, ...components }} />;
 }

@@ -191,10 +191,10 @@ export async function Footer({ locale }: { locale: Locale }) {
 
         {/* Disclaimer + legal row */}
         <div className="mt-16 border-t border-inverse/15 pt-8">
-          <p className="max-w-4xl text-xs leading-relaxed text-inverse-muted/80">
+          <p className="max-w-4xl text-xs leading-relaxed text-inverse-muted">
             {lt(siteConfig.footerDisclaimer, locale)}
           </p>
-          <div className="mt-6 flex flex-col gap-4 text-xs text-inverse-muted/80 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-6 flex flex-col gap-4 text-xs text-inverse-muted sm:flex-row sm:items-center sm:justify-between">
             <p>
               © {new Date().getFullYear()} {siteConfig.name}. {t("footer.rightsReserved")}
             </p>

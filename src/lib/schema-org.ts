@@ -46,6 +46,8 @@ export function organizationSchema(locale: Locale): JsonLdObject {
     image: logoUrl,
     telephone: siteConfig.primaryPhone,
     areaServed: areaServed(),
+    // 24/7 emergency line: the phone is answered around the clock.
+    openingHours: "Mo-Su 00:00-24:00",
     // Address is optional and currently omitted: no physical location has
     // been verified yet. Add `address` to site.config.ts when one exists.
     ...(siteConfig.address ? { address: postalAddress(siteConfig.address) } : {}),
@@ -83,6 +85,7 @@ export function serviceSchema(service: Service, locale: Locale, url: string): Js
     url,
     provider: { "@id": ORG_ID },
     areaServed: areaServed(),
+    ...(service.fm.updated ? { dateModified: service.fm.updated } : {}),
     inLanguage: locale,
   };
 }
@@ -99,6 +102,7 @@ export function areaSchema(area: Area, locale: Locale, url: string): JsonLdObjec
     url,
     provider: { "@id": ORG_ID },
     areaServed: [{ "@type": "Place", name: area.fm.title }],
+    ...(area.fm.updated ? { dateModified: area.fm.updated } : {}),
     inLanguage: locale,
   };
 }

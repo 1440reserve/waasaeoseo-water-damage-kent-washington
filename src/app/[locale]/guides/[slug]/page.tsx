@@ -15,6 +15,7 @@ import { resolveImage } from "@/lib/images";
 import type { Locale } from "@/lib/schemas";
 import { formatDate } from "@/lib/utils";
 import { MdxContent } from "@/lib/mdx";
+import { extractToc } from "@/lib/toc";
 import { Container, Section } from "@/components/ui/primitives";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { SmartImage } from "@/components/ui/SmartImage";
@@ -117,6 +118,31 @@ export default async function GuidePage({ params }: Props) {
               className="mb-12 aspect-[2/1] w-full object-cover"
             />
           ) : null}
+          {(() => {
+            const toc = extractToc(guide.body);
+            return toc.length >= 3 ? (
+              <nav
+                aria-label={locale === "es" ? "Contenido" : "On this page"}
+                className="mx-auto mb-12 max-w-prose border-l-2 border-accent bg-wash px-6 py-5"
+              >
+                <p className="eyebrow-bare mb-3 !text-[0.68rem]">
+                  {locale === "es" ? "En esta página" : "On this page"}
+                </p>
+                <ol className="space-y-2 text-[0.95rem]">
+                  {toc.map((h) => (
+                    <li key={h.id}>
+                      <a
+                        href={`#${h.id}`}
+                        className="text-muted transition-colors hover:text-accent-ink"
+                      >
+                        {h.text}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            ) : null;
+          })()}
           <article className="prose mx-auto">
             <MdxContent source={guide.body} />
           </article>
