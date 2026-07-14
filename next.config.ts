@@ -15,6 +15,18 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  async redirects() {
+    return [
+      // Consolidate the www host to the bare domain so search engines do not
+      // see two duplicate sites. Domain-agnostic, so every client inherits it.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.(?<host>.*)" }],
+        destination: "https://:host/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
