@@ -71,7 +71,7 @@ export function Header({ nav }: { nav: NavData }) {
         {nav.a11y.skipToContent}
       </a>
 
-      <div className="mx-auto flex h-[4.25rem] w-full max-w-[88rem] items-center justify-between gap-6 px-5 sm:px-8 md:h-[4.75rem]">
+      <div className="mx-auto flex h-[4.25rem] w-full max-w-[88rem] items-center justify-between gap-6 px-6 sm:px-8 md:h-[4.75rem]">
         {/* Logo */}
         <Link href="/" className="flex shrink-0 items-center" aria-label={nav.name}>
           <Image
