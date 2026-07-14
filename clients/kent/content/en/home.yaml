@@ -10,9 +10,8 @@ hero:
   eyebrow: "24/7 Emergency Response in Kent, WA"
   heading: "Water Damage Restoration in Kent, WA"
   subheading: "Flooded basement, burst pipe, or a leak that got out of hand? Call now, day or night, and get connected with a licensed, IICRC certified restoration team serving Kent and South King County."
-  # TODO: add a real photo to assets/ and reference it here, e.g.
-  # image: "photos/kent-hero.jpg"
-  # imageAlt: "TODO: describe the photo"
+  image: "photos/hero.jpg"
+  imageAlt: "Rain streaking down a window at dusk in Kent, WA"
   ctaLabel: "Request Help Now"
 
 whyUs:
@@ -38,7 +37,8 @@ serviceArea:
 ctaBand:
   heading: "Water in your home right now?"
   subheading: "Every hour of standing water makes the damage worse. Call now and talk to a real person who can get a crew headed to your Kent property."
-  # TODO: add a background photo to assets/ and reference it here.
+  image: "photos/cta-band.jpg"
+  imageAlt: ""
 
 process:
   eyebrow: "How it works"

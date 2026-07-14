@@ -34,7 +34,7 @@ const config = {
     fontPair: "editorial",
   },
   homepage: {
-    heroVariant: "split",
+    heroVariant: "panorama",
     sections: [
       "hero",
       "trustBar",
